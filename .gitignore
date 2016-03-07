@@ -1,0 +1,9 @@
+*.iml
+*.log
+.idea/
+node_modules/
+jspm_packages/
+docs/
+coverage/
+atlassian-ide-plugin.xml
+.tags*

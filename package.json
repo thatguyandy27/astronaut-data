@@ -1,0 +1,46 @@
+{
+  "name": "astronaut-data",
+  "description": "Astronaut Data",
+  "version": "4.15.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "postinstall": "jspm install && jspm update && jspm install --dev",
+    "test": "karma start karma.conf.js --single-run --browsers PhantomJS",
+    "jspm-config": "npm install jspm && jspm config registries.ghstash.timeouts.lookup 60 && jspm config registries.ghstash.timeouts.build 120 && jspm config registries.ghstash.baseurl ssh://git@stash.grubhubseamless.com:7999 && jspm config registries.ghstash.reposuffix .git && jspm config registries.ghstash.shallowclone true && jspm config registries.ghstash.handler jspm-git && jspm config registries.github.timeouts.lookup 60 && jspm config registries.github.timeouts.build 120 && jspm config registries.github.remote https://github.jspm.io && jspm config registries.github.auth Z2gtZDIwOmE5ZjVhNmRkNGFjYmZhZmY5OWNhZjY0Y2VmYjhlNDA4YmE0N2M2Nzc= && jspm config registries.github.maxRepoSize 0 && jspm config registries.github.handler jspm-github"
+  },
+  "devDependencies": {
+    "es5-shim": "4.1.11",
+    "es6-shim": "^0.28.1",
+    "esdoc": "^0.2.6",
+    "isparta": "^3.0.4",
+    "jasmine": "^2.3.2",
+    "jasmine-core": "^2.3.4",
+    "jscs": "^2.1.1",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.0",
+    "jspm": "0.16.2",
+    "jspm-git": "^0.3.3",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-coverage": "0.5.4",
+    "karma-es6-shim": "^0.1.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-jspm": "^2.0.1",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.17"
+  },
+  "jspm": {
+    "dependencies": {
+      "mithril": "npm:mithril@^0.2.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
